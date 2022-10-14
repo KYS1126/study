@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 부모 */
+        div.parent {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            background: royalblue;
+        } 
+
+        /* 자식 */
+        div.child1 {
+            position: absolute;
+            top: 80px;
+            right: 150px;
+            width: 200px;
+            height: 100px;
+            background: salmon;
+            /* 앞으로 보내기 캐드로 dr.f */
+            /* 수치가 클수록 앞으로옴 */
+            z-index: 2;
+        }
+
+        div.child2 {
+            position: absolute;
+            top: 80px;
+            right: 100px;
+            width: 200px;
+            height: 100px;
+            background: rgb(170, 245, 152);
+            z-index: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+    </div>
+</body>
+</html>

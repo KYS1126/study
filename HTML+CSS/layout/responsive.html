@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 반응형 사이트 만들때 사용하는 옵션 -->
+    
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 뷰포트를 사용자가 접속한 디바이스로 맞춰줌  ,     initial-scale=1.0 - 기본값은 1임 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 960px;
+            height: 500px;
+            background-color: skyblue;
+            /* 가운데 정렬 */
+            margin: 0 auto;
+        }
+        /* 가변 그리드 공식 */
+        /* 자식 박스 가로너비 / 부모 박스 가로 너비 x 100 (pdf 참고) */
+        #wrap div {
+            width: 300px;
+            height: 100%;
+            background-color: salmon;
+        }
+        /* 0~959px까지 */
+        @media screen and (max-width: 959px) {
+            #wrap {
+                width: 100%;
+            }   
+
+            #wrao div {
+                width: 31.25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ★
+        block: margin과 padding을 자유롭게 지정,width,height 자유롭게 변경
+         div,시멘틱 태그(레이아웃), p,h1~h6, table, ul......
+
+        inline: margic과 padding을 좌우만 지정할수있다,width,height 변경불가
+        a, img, span, button,textarea, slect,input,label
+        
+        nline-block: span(인라인) 태그에 display: block, display: inline-block 명령어 입력
+         인라인이지만 블록 태그를 사용 가능해짐, 인라인의 특성을 가지고 있지만. 
+          블록태그 사용 가능 (참고 display: none; 사용시 숨겨짐)
+                
+        */
+
+/* 인라인 태그는 위아래 변경 불가 */
+        span {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            margin: 30px
+        }
+    </style>
+</head>
+<body>
+    <!-- 블록태그(줄바꿈을 하지 않아도 바뀜) -->
+    <p>블록 태그</p>
+    <p>블록 태그</p>
+    <p>블록 태그</p>
+    <p>블록 태그</p>
+    <!-- 인라인태그(줄바꿈을 해줘야함) -->
+    <span>인라인태그</span>
+    <span>인라인태그</span>
+    <span>인라인태그</span>
+    <span>인라인태그</span>
+</body>
+</html>

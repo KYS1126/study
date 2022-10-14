@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position: relative ->뷰포트 기준으로 보임 작은 뷰포트에서는 잘릴 수도 있음  */
+        div.parent {
+            position: relative;
+            /* top,left는 포지션을 줘야 사용가능 */
+            top: 100px;
+            left: 300px;
+            width: 200px;
+            height: 100px;
+            background: salmon;
+        } 
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* 인코딩, 글자 깨짐 방지 */
+@charset "utf-8";
+
+/* css 처음 만들때 최초에는 초기화 코드를 넣어야함 */
+/* 아래 코드는 브라우저 여백을 지워주는 역할 */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background: #ccc;
+    padding: 20px;
+}
+
+#signup {
+
+}
+
+/* 한칸 띄면 자식과 손주를 같이 선택하는 것 */
+#signup fieldset {
+
+}
+
+/* 아래 코드는 fieldset 안에서 마지막 부분(버튼)을 선택하겠다 */
+#signup fieldset:last-of-type {
+
+}
+
+/* 로그인 정보, 개인정보 */
+#signup legend {
+
+}
+
+/* 개인정보 li,로그인정보 li 선택 */
+#signup ul li {
+
+}
+
+/* 라벨 요소를 모두 선택 */
+#signup label {
+    
+}
+
+#signup button {
+
+}
+
+/* 결국은 인풋 태그를 전부 선택하는것 아래는 속성 선택자를 사용함 */
+/* signup input 해도 맞지만 좀더 직관적으로 표현하기 위함 */
+#signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email] {
+
+}
+
+/* 인풋에서 required 속성을 가진 것만 선택 */
+/* 속성선택자 */
+#signup input[:required] {
+
+}
+
+/* 위와 같음 */
+#signup input[:read-only] {
+
+}
+
+/* 마우스 올렸을 때 효과 */
+#signup button:hover {
+    
+}
