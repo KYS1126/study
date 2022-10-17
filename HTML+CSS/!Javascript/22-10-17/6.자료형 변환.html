@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //주의사항:prompt는 항상 문자형으로 받는다.
+        const str = prompt("아무 숫자나 입력하시오", 0);
+        console.log(str);
+
+
+        //강제 숫자로 형변환 ->Number,
+        let sum = 12 + Number(str);
+        let sum1 = 12 + parseInt(str);
+        console.log(sum);
+        console.log(sum1);
+
+
+        //강제 문자로 형변환
+        let sum2 = 12 + String(str)
+        console.log(sum2);
+
+        
+        //boolean 변환
+        console.log(Boolean(0))
+    </script>
+</body>
+</html>

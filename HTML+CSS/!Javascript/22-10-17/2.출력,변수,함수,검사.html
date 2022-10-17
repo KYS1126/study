@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 콘솔창에서 출력
+        console.log("안녕하세요");
+        //브라우저에서 출력
+        document.write("안녕하세요")
+
+        var f1 = "안녕하세요";
+        console.log("f1");
+
+        var str = "text";
+        console.log(str);
+
+        var str2 = "i " + "am " + str ; 
+        console.log(str2)
+
+        var str3 = "1"; //문자형
+        var sum = 10;  //숫자
+
+        //더하기를 할때 하나라도 문자형이 있으면 문자열 합산을 한다
+        console.log(str3 +sum);
+        console.log('안녕하세요. 저는 "하서" 입니다.')
+
+        console.log("-------------------")
+
+
+        var num = 9; //숫자형
+        var num2 = 2;
+        // var sum = num + num2;
+
+        console.log(num + num2); //더하기
+        console.log(num - num2); 
+        console.log(num * num2); //곱하기
+        console.log(num / num2); //나누기
+        console.log(num % num2); //나머지
+        // console.log(sum);
+
+
+        console.log("-------------------")
+
+
+        
+        var flag = 10 >= 10;  //boolean형
+        console.log(flag);
+
+        var a = 10;
+		var b = 20; //숫자형
+		var c = 10;
+		var f = "20";  //문자형
+		var result;
+
+        var result = b == f;
+        var result2 = b === f;
+
+        console.log(result); //true -> 값만 비교함
+        console.log(result2); //false -> 값 비교, 자료형 비교
+
+        console.log("-------------------")
+
+        var a1;  //값이 정의되지 않음 undefined
+        var b1 = null;  //빈 값
+
+        console.log(a1);
+        console.log(b1);
+
+        // undefined, null, 빈문자열(""), 0을 제외한 모든 것은 true
+
+        console.log(Boolean(b1));
+
+        console.log("-------------------")
+
+
+
+        // // boolean 자료형
+        // var flag1 = true, flag2 = false, flag3 = true;
+
+        // console.log(flag1 && flag2 && flag3) //and (두개 다 true여야 true)
+        // console.log(flag1 || flag2) //or (하나만 true여도 true)
+        // console.log(!flag1)         //not (반대로)
+
+
+
+        // 예시
+        var flag1 = 10>2, flag2 = 10<5, flag3 = 2>=1;
+
+        console.log(flag1 && flag2 && flag3) //and (두개 다 true여야 true)
+        console.log(flag1 || flag2) //or (하나만 true여도 true)
+        console.log(!flag1)         //not (반대로)
+        console.log(flag3)
+
+
+        console.log("-------------------")
+
+        //typeof -> 자료형 검사.
+        console.log(typeof(flag1)) //boolean
+        console.log(typeof("안녕")) //string
+        console.log(typeof(5))  //number
+
+
+
+    </script>
+</body>
+</html>
