@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if:만약에 ~라면
+        // if -> 괄호 안에 있는 값이 참일때 코드를 실행한다.
+        if (273 > 100) {
+            alert('true 입니다');
+        }
+
+        if (80 > 100) {
+            alert('true 입니다');
+        }
+
+        if (110 > 100) {
+            alert('true 입니다');
+            if (110 > 100) {
+                alert('true 입니다');
+            }
+        }
+
+        //날짜,시간 객체
+        const date = new Date(); //날짜,시간 객체
+        const hour = date.getHours(); //현재 시간 구하기
+        console.log(hour);
+
+
+        if (hour < 12) {
+            alert('오전입니다.');
+        }
+
+        if (hour >= 12) {
+            alert('오후입니다.');
+        }
+
+
+        
+
+    </script>
+</body>
+</html>

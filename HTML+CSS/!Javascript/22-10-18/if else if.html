@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //날짜,시간 객체
+        const date = new Date(); //날짜,시간 객체
+        const hour = date.getHours(); //현재 시간 구하기
+        console.log(hour);
+
+
+        //참이면 if를 실행하고 거짓이면 else를 실행한다.
+        //&&(and) -> 두개 다 참이여야 true.
+        //if else if -> 차례대로 위에서 참인 값을 출력한다.
+        if (hour >= 6 && hour < 12) {   //->6 ~ 11이여야 참
+            alert('오전입니다.');
+        } else if(hour >= 12 && hour <=18) {  //12 ~ 18이여야 참
+            alert('오후입니다.');
+        } else {  //위에 전부 아니면 밑으로 출력
+            alert('저녁입니다.');
+        }
+
+    </script>
+</body>
+</html>
