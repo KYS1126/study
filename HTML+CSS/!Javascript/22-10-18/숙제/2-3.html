@@ -13,16 +13,27 @@
 
 
         // 4학년은 70점 이상이면 합격
-        if (a = 4 && b >= 70) {
+        if (a === 4 && b >= 70 && b <= 100) {
             alert('합격');
-        } else {
+        } else if (a === 4 && b < 70 && b <= 100) {
             alert('불합격');
+        } else if (a <= 3 && b >= 60 && b <= 100) {
+            alert('합격');
+        } else if (a <= 3 && b < 60 && b <= 100) {
+            alert('불합격');
+        } else if (a > 4 && b >= 60 && b <= 100) {
+            alert('합격');
+        } else if (a > 4 && b < 60 && b <= 100) {
+            alert ('불합격');
+        } else if (b < 0) {
+            alert('에러입니다');
+        } else if (b > 100) {
+            alert('에러입니다.');
         }
 
 
 
 
-
-    </script>
+</script>
 </body>
 </html>

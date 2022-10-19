@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for 반복문 중에 하나임\
+        // 0에서 시작하는데 5아래일때까지 ++를 반복한다
+        // 참일때 {} 안에 있는 코드를 실행한다.
+        //ex : i++, i-=2
+        // for (let i = 0; i < 5; i++) {
+        //     console.log(i);
+        // }
+
+        // for (let i = 0; i < 10; i+=2) {
+        //     console.log(i);
+        // }
+
+
+        //ex 0~100, 0부터 100까지의 합계
+        let sum = 0;
+        for (let i = 0; i < 100; i++) {
+            sum += i  //sum = sum + i
+            console.log(`sum: ${sum}`)
+        }
+
+        // for문 바깥에 있으면 하나만 나옴
+        console.log(`최종 sum: ${sum}`)
+        
+
+
+    </script>
+</body>
+</html>

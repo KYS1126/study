@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bmi(a, b, c) {
+            let bmi = a / (b*c);
+            return bmi;
+        }
+        let total = bmi(10, 10, 10)
+        console.log(total)
+
+// =====================================================
+
+        const bmi1 = function(a1, b1, c1) {
+            let bmi1 = a1 / (b1*c1)
+            return bmi1;
+        }
+        let total1 = bmi1(10, 10, 10)
+        console.log(total1)
+
+// ====================================================
+
+        // const sum2 = (e, f) => {
+        //     return e + f;
+        // }
+
+        const bmi2 = (a2, b2, c2) => {
+            let bmi2 = a2 / (b2*c2);
+            return bmi2
+        }
+
+        var total2 = bmi2(10, 10, 10)
+        document.write(total2)
+
+// ========================================================
+
+        const bmi3 = (a3, b3, c3) => {
+            return a3 / (b3*c3);
+        }
+
+        var total3 = bmi(65, 1.73, 1.73)
+        console.log(total3)
+
+        
+    </script>
+</body>
+</html>
