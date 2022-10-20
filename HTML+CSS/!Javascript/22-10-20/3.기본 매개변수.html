@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //기본 매개변수
+        //펑션 앞에 숫자를 넣어주면 기본값임.
+        function earnings(name, wage=9000, hours=40) {
+            console.log(`${name}님의 급여 정보`)
+            console.log(`시급: ${wage}`)
+            console.log(`근무 시간: ${hours}`)
+            console.log(`급여: ${wage * hours}원`)
+            console.log(`====`)
+            
+        }
+
+
+        earnings('구름')
+        earnings('별', 10000)
+        earnings('달', 10000, 52)
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

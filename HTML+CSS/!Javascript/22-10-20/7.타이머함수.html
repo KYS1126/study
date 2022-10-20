@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //~초 후에 한번 실행
+        //1000 = 1초
+        setTimeout(()=>{
+            console.log('2초 후에 실행됩니다')
+        }, 2000)
+
+        let cnt = 0;
+
+
+        //~몇초마다 한번씩 실행
+        setInterval(()=>{
+            console.log(`2초 마다 실행됩니다 ${cnt}`)
+            cnt++;
+        }, 2000)
+
+
+    </script>
+</body>
+</html>

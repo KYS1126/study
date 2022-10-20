@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수 정의
+        //이름 있는 함수, 비익명함수
+        // function bmi(weight, height) {
+        //     let result = weight / (height * height);
+        //     return result;
+        // }
+
+
+        //이름 없는 함수, 익명함수
+        // const bmi = function(weight, height) {
+        //     let result =  weight / (height * height);
+        //     return result;
+        // }
+
+
+        //화살표 함수(es6에서 사용함)
+        // const bmi = (weight, height) => {
+        //     let result =  weight / (height * height);
+        //     return result;
+        // }
+
+        const bmi = (weight, height) => weight / (height * height);
+            
+
+
+
+
+        let result2 = bmi(60, 160);
+
+        console.log(result2);
+    </script>
+    
+</body>
+</html>

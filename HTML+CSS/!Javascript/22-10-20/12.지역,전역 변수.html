@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수</title>
+    <body>
+        <script>
+            var num = 1;  //전역변수.얼마든지 함수선언에 가져다가 쓸 수 있다.
+
+            //함수선언
+            function love(){
+              var b = 10;     //함수 안에 있는변수는 지역변수.
+              var a = num+1;  //함수 안에 있는변수는 지역변수.
+              console.log('a:',a);
+            }
+
+            love();
+            console.log(num); //전역 변수를 가져옴.
+            console.log(b);  //지역 변수는 함수 밖에서는 못가져옴. 
+        </script>
+</body>
+</html>

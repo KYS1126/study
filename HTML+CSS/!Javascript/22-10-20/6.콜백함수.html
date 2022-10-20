@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach()
+
+        const numbers = [273, 52, 103, 32, 57]
+
+        // forEach, 모든 배열을 가져와서 밸류와 인덱스를 적으면 알아서 정렬해줌
+        //array를 쓰면 전체 배열을 가져온다.
+        numbers.forEach(function(value, index, array){
+            console.log(`${array}`)
+            console.log(`${index}번째:${value}`)
+        })
+
+        //map -> return값들을 모아서 배열로 만들어준다.
+        let result = numbers.map(function(value, index, array) {
+            return value * value
+        })
+
+        console.log(result);
+
+        // filter는 return값이 참일때만 해당 데이터를 모아준다.
+        // re턴 앞에 있는 함수가 참이여야 발동함.
+        const evenNumbers = numbers.filter(function(value){
+            console.log(value)
+            return value % 2 === 0 //짝수 구하기
+        })
+
+        console.log(e`결과: ${evenNumbers}`)
+
+
+
+
+
+    </script>
+</body>
+</html>

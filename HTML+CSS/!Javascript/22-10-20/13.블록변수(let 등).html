@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //var변수는 중괄호를 자유자재로 넘나든다.
+    //let변수는 자신이 속한 중괄호 안에서만 사용가능하다.
+    //const변수는 자신이 속한 중괄호 안에서만 사용가능하다.
+function logScope(){
+var local = 2;
+    if(local){
+        var local = '다른 값';
+        console.log('블럭안의 var:',local);
+    }
+    console.log('local',local)
+}
+logScope();
+</script>
+</body>
+</html>
