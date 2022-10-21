@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 생성자 방식()
+        //객체는 속성 + 메소드
+        //객체는 첫번째가 대문자여야함.
+        //함수는 소문자로
+
+        //객체생성
+        function Pet(name, age) {
+            //속성 만들기
+            //this - > 현재 Pet이라는 객체 안에있는 .name이다. , 
+            this.name = name
+            //메소드 만들기
+            //this는 객체!!안에 있는 name을 가르키고 그냥 name은 위에있는 Pet에name을 가르킨다.
+            this.eat = function(food) {
+                console.log(`${this.name}이가 ${food}을 먹습니다. 나이는 ${age}살입니다.`)
+            }
+            this.age = age
+        }
+
+        //객체 생성
+        //변수를 하나 만들어주고 new이후 위에 있는 객체명을 가져온다.
+        //이렇게 객체를 쓰는 이유는 코드의 생산성이 높아진다.
+        const pet = new Pet("구름", 5);
+        const pet2 = new Pet("별", 10); //하나 더 만들 수 있음
+        const pet3 = new Pet("달", 11);
+        const pet4 = new Pet("해", 9);  //코드의 생산성 응용 예시
+        //pet,pet2,pet3,pet4 라는 각각의 새로운 방에 구름, 별, 달, 해만 바뀐 방이 생성
+        //★객체가 생성되는 순간 속성에 값이 할당된다.
+    
+
+        console.log(pet.name)
+        //함수
+        pet.eat('밥')
+        // pet.age()
+        pet2.eat('밥')
+        // pet.age()
+        pet3.eat('밥')
+        // pet.age()
+        pet4.eat('밥')
+        // pet.age()
+</script>
+</body>
+</html>

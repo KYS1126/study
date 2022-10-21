@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //이미 만들어진 객체를 가져다가 쓰는것.
+        const f = new Number(273.552222222222)
+        //레퍼런스 인스턴트 메소드 사용예제
+        console.log(f.toFixed(1))
+
+        const d = new Date()
+        console.log(d)
+        console.log(d.getDay())
+
+
+
+        const s = new String("안녕하세요")
+        console.log(s)
+
+        let str = "the orange test haha"
+        let num = 1
+
+        for (let i = 0; i < str.length; i++) {
+            console.log(str[i])
+        }
+        //배열 형태로 만들어준다.
+        //괄호 안에 들어가는것을 기준으로 나눠준다.
+        //현재는 띄어쓰기를 기준으로 잡음
+        //뒤에 숫자를 붙이면 몇개까지 출력할지 지정 가능.
+        const word = str.split(' ', 2);
+        console.log(word)
+
+
+
+        //concat , 문자열을 붙여준다.
+        //slice , 인덱스를 지정하여 문자열을 지정한만큼 잘라준다
+        //ivdexOf , 찾고싶은 문자를 쓰면 그 문자가 위치한 인덱스 번호를 알려준다. / 없는 글자를 쓰면 -1을 준다.
+        //substring , (1, 2)->1~3인덱스를 남기고 모두 지움, (2)-> 2안덱스 앞을 잘라냄
+        //toLowerCase , 소문자로 바꾸는 것. 오버는 대문자로 바꾸는것
+        //toString , 배열이 아니라 문자로 바꿔줌
+    </script>
+</body>
+</html>

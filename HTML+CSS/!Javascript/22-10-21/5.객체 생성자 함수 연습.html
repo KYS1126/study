@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Pet(name, age, id) {
+            this.name = name
+            this.eat = function(food) {
+                console.log(`${this.name}이가 ${food}을 먹습니다. 나이는 ${age}살입니다. 고양이의 종류는 ${id}입니다.`)
+            }
+            this.age = age
+            this.id = id
+            this.idlist = function () {
+                document.write(`${name}이의 종은 ${id}입니다. <br>`)
+            }
+
+            if (age > 10) {
+                console.log(`${name}의 나이는 10살 이상입니다.`)
+            } else {
+                console.log(`${name}의 나이는 10살 미만입니다.`)
+            }
+            
+            
+            
+
+        }
+        
+
+
+
+
+
+
+        const pet = new Pet("구름", 5, "호랑이");
+        const pet2 = new Pet("별", 10, "야옹이");
+        const pet3 = new Pet("달", 11, "멍멍이");
+        const pet4 = new Pet("해", 9, "보통이");
+
+    
+
+        //함수
+        pet.eat('밥')
+        pet.idlist()
+        pet2.eat('밥')
+        pet2.idlist()
+        pet3.eat('밥')
+        pet3.idlist()
+        pet4.eat('밥')
+        pet4.idlist()
+
+</script>
+</body>
+</html>

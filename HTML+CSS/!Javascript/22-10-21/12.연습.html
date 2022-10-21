@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Pet(name, age, id, a) {
+            this.name = name
+            this.age = age
+            this.id = id
+
+            this.full = function () {
+                console.log(`이름:${name} 나이:${age} 성별:${id}`)
+            }
+
+            if (age >= 50) {
+                console.log(`${name}은 50세 이상인 ${age}세 입니다.`)
+            } else if (age < 50) {
+                console.log(`${name}은 50세 미만인 ${age}세 입니다.`)
+            }
+
+            // for () {
+            //     document.write(`키가 가장 큰 사람은 ${name} 입니다`)
+            // }
+        }
+
+        const pet = new Pet("가나다", 99, "남자", [180]);
+        const pet2 = new Pet("라마바", 49, "남자", [190]);
+        const pet3 = new Pet("사아자", 51, "남자", [160]);
+        const pet4 = new Pet("차차차", 10, "남자", [150]);
+
+        pet.full()
+        pet2.full()
+        pet3.full()
+        pet4.full()
+
+
+
+
+
+    </script>
+</body>
+</html>

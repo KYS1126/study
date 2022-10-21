@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 데이터(JSON)
+        const product = {
+            name: '건조망고',
+            type: '당절임',  
+            weigt: 3,
+            arr: [1, 2, 3]
+        }
+
+        //배열 안에 객체데이터
+        const product2 = [{
+            name: '건조바나나',
+            type: '바나나절임',  
+            weigt: 2,
+        }, {
+            name: '건조망고',
+            type: '망고절임',  
+            weigt: 3,
+        }]
+
+        // stringify 를 쓰면 배열이였던 객체 데이터를 문자열로 바꿔준다.
+        console.log(JSON.stringify(product2))
+
+
+        //product2가 배열이니까 앞에 인덱스 번호로 불러올수있다.
+        console.log(product2[0]);
+        console.log(product2[1]);
+
+
+        //문자열인데 객체데이터로 바꾸고싶음
+        //바꿀때는 key 부분에 "" 를 넣어줘야함.
+
+        const product3 = '{"result": true, "count":42}'
+        const obj = JSON.parse(product3)
+
+        console.log(obj)
+    </script>
+</body>
+</html>

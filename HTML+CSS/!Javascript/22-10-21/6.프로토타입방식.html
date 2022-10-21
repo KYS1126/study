@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3.prototype 방식
+        //객체 = 속성 + 메소드
+        function Pet(name, age, id) {
+            this.name = name;
+            this.age = age;
+            this.id = id
+        }
+
+        //prototype 방식은 메소드를 fun 밖에 쓴다
+        //객체명.prototype.함수명 = fun() {}
+        Pet.prototype.eat = function(food){
+            console.log(`${this.name}이가 ${food}를 먹습니다`)
+        }
+
+        Pet.prototype.agelist = function () {
+            console.log(`${this.name}의 나이는${this.age}입니다.`)
+        }
+
+        Pet.prototype.idlist = function () {
+            console.log(`${this.name}의 종류는 ${this.id}입니다.`)
+        }
+
+        const pet = new Pet("구름", 7, "호랑이")
+        const pet2 = new Pet("하늘", 5, "멍멍이")
+        const pet3 = new Pet("바다", 11, "동동이")
+        const pet4 = new Pet("산", 12, "호돌이")
+
+
+        //함수실행
+        pet.eat("밥")
+        pet.agelist()
+        pet.idlist()
+
+        pet2.eat("밥")
+        pet2.agelist()
+        pet2.idlist()
+
+        pet3.eat("밥")
+        pet3.agelist()
+        pet3.idlist()
+
+        pet4.eat("밥")
+        pet4.agelist()
+        pet4.idlist()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //spread operator
+        //얕은 복사
+        //이게 무슨 소리지...?
+        //복사가 아니라 공유한다
+        const obj1 = ['우유', '식빵']
+        const obj2 = obj1
+
+        obj2.push('고구마')
+        obj2.push('토마토')
+
+        console.log(obj1)
+        console.log(obj2)
+
+        //깊은 복사
+        const obj3 = ['우유', '식빵']
+        const obj4 = [...obj3]
+
+        obj4.push('고구마')
+        obj4.push('토마토')
+
+        console.log(obj3)
+        console.log(obj4)
+
+
+        const product = {
+            name: '건조망고', //key,val
+            type: '당절임',  
+            weigt: 3,
+            arr: [1, 2, 3]
+        }
+
+        const product2 = {
+            ...product
+        }
+
+        product2.date = "2022/10/11"
+
+        console.log(product);
+        console.log(product2);
+
+
+    </script>
+</body>
+</html>
