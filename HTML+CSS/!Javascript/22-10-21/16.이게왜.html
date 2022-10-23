@@ -27,10 +27,10 @@
             
         }
         
-        const pet = new Pet("가나다", 99, "남자", [180]);
-        const pet2 = new Pet("라마바", 49, "남자",[190]);
-        const pet3 = new Pet("사아자", 51, "남자", [160]);
-        const pet4 = new Pet("차차차", 10, "남자", [150]);
+        const pet = new Pet("가나다", 99, "남자", 180);
+        const pet2 = new Pet("라마바", 49, "남자", 190);
+        const pet3 = new Pet("사아자", 51, "남자", 160);
+        const pet4 = new Pet("차차차", 10, "남자", 150);
         
         // console.log(pet2.a, pet.a, pet3.a, pet4.a)
         
@@ -44,6 +44,7 @@
         // console.log(pettotal4)
 
         
+        // let total = (pet.a, pet2.a, pet3.a, pet4.a)
 
         let total = ([pettotal, pettotal2, pettotal3, pettotal4]);
         console.log(total);
@@ -53,15 +54,15 @@
             if (total < item) {
                 total = item
                 console.log(total)
-                console.log(`이들중 가장 큰 키는 ${total[0]}cm ${total[1]}이름`)
+                console.log(`이들중 가장 큰 키는 ${total[0]}cm ${total[1]}입니다.`)
             }
         }
 
         
-        pet.full()
-        pet2.full()
-        pet3.full()
-        pet4.full()
+        // pet.full()
+        // pet2.full()
+        // pet3.full()
+        // pet4.full()
 
 
 
