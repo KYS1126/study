@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+            
+            user () {
+                console.log(`이름:${this.name} 나이:${this.age}`)
+            }
+            
+        }
+
+        const user = new User('김김김', 18)
+
+        user.user()
+
+
+
+    </script>
+</body>
+</html>

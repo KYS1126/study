@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Square {
+            //private : 외부 접근 차단함
+            #length //this.length를 private 로 사용하겠다고 정의
+
+            constructor (length) {
+                this.#length = length
+            }
+
+            getPerimeter () {
+                return 4 * this.#length
+            }
+
+            getArea () {
+                return this.#length * this.#length
+            }
+        }
+
+
+        const square = new Square(10)
+        // square.length = -10 //이렇게 밖에서 쓰게 되면 전혀 다른 값이 나오게된다. 하지만 private을 쓰면 외부접근 불가
+        console.log(`length: ${square.length}`) //볼수없음
+        console.log(`getPerimeter(): ${square.getPerimeter()}`)
+        console.log(`getArea(): ${square.getArea()}`)
+        
+    </script>
+</body>
+</html>

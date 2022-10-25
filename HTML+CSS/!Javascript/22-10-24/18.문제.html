@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> cm =
+    <span></span>
+    <select>
+        <option value="10">mm</option>
+        <option value="0.01">m</option>
+        <option value="0.393701">inch</option>
+    </select>
+    <script>
+        let currentVal; //현재 값
+        let transVal = 10; //변환상수
+
+        console.log(currentVal)
+        console.log(transVal)
+
+        const select = document.querySelector('select')
+        const span = document.querySelector('span')
+        const input = document.querySelector('input')
+
+        //계산해주는 함수
+        function calculate() {
+            //계산 결과를 보여준다.
+            //소수점 두자리 까지만
+            span.textContent = (currentVal * transVal).toFixed(2)
+        }
+        //
+        select.addEventListener('change', function(e){
+            const options = e.currentTarget.options
+            console.log(options)
+            const index = e.currentTarget.options.selectedIndex
+            console.log(index)
+            transVal = e.currentTarget.value
+            console.log(transVal)
+            calculate()
+        })
+        // 100cn = 1m
+        input.addEventListener('keyup', function(e){
+            currentVal= input.value
+            calculate()
+        })
+
+
+
+
+    </script>
+</body>
+</html>

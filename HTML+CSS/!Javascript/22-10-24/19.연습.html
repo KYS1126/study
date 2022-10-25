@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> cm =
+    <span></span>
+    <select>
+        <option value="10">mm</option>
+        <option value="0.01">m</option>
+        <option value="0.393701">inch</option>
+    </select>
+
+    <script>
+        let inputval
+        let selectval = 10;
+
+        const input = document.querySelector('input')
+        const select = document.querySelector('select')
+        const span = document.querySelector('span')
+        console.log(select)
+
+        function trans () {
+            span.textContent = (inputval * selectval);
+        }
+        select.addEventListener('change', function(e) {
+            const options = e.currentTarget.options
+            const index = e.currentTarget.options.selectedIndex
+            selectval = e.currentTarget.value
+            trans()
+        })
+
+        input.addEventListener('keyup', function(e) {
+            inputval = input.value
+            trans()
+        })
+
+
+        // select.addEventListener('change', function(e){
+        //     const options = e.currentTarget.options
+        //     const index = e.currentTarget.options.selectedIndex
+        //     transVal = e.currentTarget.value
+        //     calculate()
+        // })
+
+     </script>
+</body>
+</html>

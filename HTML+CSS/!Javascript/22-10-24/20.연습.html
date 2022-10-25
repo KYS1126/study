@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> cm =
+    <span></span>
+    <select>
+        <option value="10">mm</option>
+        <option value="0.01">m</option>
+        <option value="0.393701">inch</option>
+    </select>
+
+    <script>
+        const input = document.querySelector('input')
+        const span = document.querySelector('span')
+        const select = document.querySelector('select')
+
+        let inputval;  //입력창에 들어가는 숫자를 let으로 변화가능한 변수를 선언했음
+        let selectval = 10; //최초 mm터로 되있으니까 디폴트 값은 10임
+
+        function trans () {  //계산식을 미리 만들어 두었다.
+            span.textContent = (inputval * selectval).toFixed(3)
+        }
+        
+        select.addEventListener('change', function(e) {
+            const options = e.currentTarget.options
+            const index = e.currentTarget.options.selectedIndex
+            selectval = e.currentTarget.value
+            trans()
+        })
+
+        input.addEventListener('keyup', function(e) { //이벤트를 지정해줌. 방식은 키업으로 키보드가 눌릴때마다 반응하는 함수를 지정하겠다.
+            inputval = input.value
+            trans()
+        })
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

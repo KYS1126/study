@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- [넓이 = 3.14*반지름*반지름] [둘레=2*3.14*반지름] -->
+    <input type="text">반지름을 입력하세요<br>
+    <button>계산</button> <br>
+    <span class="nul"></span> <br>
+    <span class="dul"></span>
+
+    <script>
+        const input = document.querySelector('input')
+        const nul = document.querySelector('.nul')
+        const dul = document.querySelector('.dul')
+        const button = document.querySelector('button')
+        const span = document.querySelector('span')
+        
+        // function calculate () {
+
+        // }
+
+        button.addEventListener('click', function() {
+            const nulval = 3.14 * Number(input.value)
+            console.log(nulval)
+
+            const dulval = 2 * 3.14 * Number(input.value)
+            console.log(dulval)
+
+            span.textContent = `넓이:${nulval.toFixed(3)}둘레:${dulval.toFixed(3)}`
+
+        })
+
+
+    </script>
+</body>
+</html>

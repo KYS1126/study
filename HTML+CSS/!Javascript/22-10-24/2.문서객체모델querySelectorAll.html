@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+
+    <script>
+        //querySelectorAll -> 해당 요소를 모두 가져온다. 단 배열로 가져온다.
+        const header = document.querySelectorAll('.txt')
+        console.log(header)
+
+        //배열을 하나씩 꺼냄
+        //방법1
+        for (let i = 0; i<header.length; i++) {
+            header[i].style.color = 'red'
+            header[i].style.backgroundColor = 'black'
+            console.log(header[i]);
+        }
+        
+        //방법2 나는 이게 편해
+        for (headers of header) {
+            header[i].style.color = 'red'
+            header[i].style.backgroundColor = 'black'
+        }
+
+        //방법3
+        header.forEach(function(header) {
+            header[i].style.color = 'red'
+            header[i].style.backgroundColor = 'black'
+        }) 
+
+
+
+
+        
+    </script>
+</body>
+</html>

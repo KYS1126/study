@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        첫번째 div
+        <span>테스트</span>
+    </div>
+    <script>
+        //createElement -> 요소를 하나 생성해준다. ex)createElement(h1) => <h1></h1>태그 생성
+        const header = document.createElement('h1')
+
+        //appendChild -> 중간에 넣는다. ex)body(부모)에 내가 생성한 h1(자식)사이에 넣어준다.
+        //appendChild 부모 요소 아래에 자식 요소로 넣어준다.
+        document.body.appendChild(header)
+
+        const box = document.querySelector('.box')
+        //querySelector로 위에 있는 span태그를 가져온 후
+        const spanTag = document.querySelector('span')
+
+        box.appendChild(header);
+        //removeChild로 가져온 span 태그를 지워준다.
+        box.removeChild(spanTag)
+
+
+</script>
+</body>
+</html>

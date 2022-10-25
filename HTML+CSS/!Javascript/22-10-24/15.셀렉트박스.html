@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>오뎅</option>
+        <option>튀김</option>
+    </select>
+    <p>선택: 떡볶이</p>
+
+    <script>
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+        
+        //change 보통 셀렉트 박스에 자주 사용함. 변화가 일어난다.
+        select.addEventListener('change', function (e) {
+            //e.currentTarget.options-> (select박스의)이벤트가 일어나는 타겟들의 옵션을 다 가져온다.
+            const options = e.currentTarget.options //옵션에서 떡볶이를 선택했을때 객체 정보중에 currentTarget 이라는 항목이 있음
+            console.log(options)
+            // selectedIndx -> 선택한 값의 인덱스번호를 가져온다.
+            const index = e.currentTarget.options.selectedIndex
+            console.log(index)
+
+            //배열을 가져온 후에 그 배열의 인덱스 번호를 가져온다.
+            //.textContent 뒤에 넣으면 글자만 가져올 수 있다.
+            p.textContent = `선택: ${options[index].textContent}`
+        })
+
+
+    </script>
+
+
+
+
+</body>
+</html>

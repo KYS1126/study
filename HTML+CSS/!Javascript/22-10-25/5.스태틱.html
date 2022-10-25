@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //프로토 타입에선 function 으로 만들었는데 클래스는 class로 만든다
+
+    class Pet { //대소문자 주의
+        //스태틱, 정적속성
+        static color = 'black'   
+
+        constructor(nameVal, ageVal, catVal, a) {
+            this.name = nameVal
+            this.age = ageVal
+            this.cat = catVal
+            this.a = ageVal
+            }
+
+            eat (food) {
+                console.log(`${this.name}이가 ${food}를 먹습니다.`)
+            }
+            age1 () {
+                document.write(`${this.name}의 나이는 ${this.age}살 입니다.<br>`)
+            }
+
+            cat1 () {
+                document.write(`${this.name}의 종류는 ${this.cat}입니다.`)
+            }
+
+            static colorPrint() { //정적 함수,정적 메소드(스태틱 메소드) 스태틱은 스태틱만 접근 가능
+                console.log(`이름은 ${this.color}입니다.`)
+            }
+
+        }
+
+        const pet = new Pet('구름', 7, '코숏', 10)
+        const pet2 = new Pet('달', 8, '바보', 15)
+        const pet3 = new Pet('별', 5, '두번', 13)
+
+        //정적 메소드는 위와같이 new 로 따로 선언 안해줘도 바로 불러올수있다.
+        console.log(Pet.color) //정적함수 실행
+        console.log(Pet.namePrint())
+
+
+
+
+        //함수 실행
+        pet.eat('통조림')
+        pet.age1()
+        pet.cat1()
+
+
+
+    </script>
+</body>
+</html>

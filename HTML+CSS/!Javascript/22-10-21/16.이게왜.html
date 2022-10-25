@@ -15,22 +15,22 @@
             this.a = a
             
             this.full = function () {
-                // console.log(`이름:${name} 나이:${age} 성별:${id}`)
+                console.log(`이름:${name} 나이:${age} 종:${id}`)
             }
             
             if (age >= 50) {
-                // console.log(`${name}은 50세 이상인 ${age}세 입니다.`)
+                console.log(`${name}은 50세 이상인 ${age}세 입니다.`)
             } else if (age < 50) {
-                // console.log(`${name}은 50세 미만인 ${age}세 입니다.`)
+                console.log(`${name}은 50세 미만인 ${age}세 입니다.`)
             }
             
             
         }
         
-        const pet = new Pet("가나다", 99, "남자", 180);
-        const pet2 = new Pet("라마바", 49, "남자", 190);
-        const pet3 = new Pet("사아자", 51, "남자", 160);
-        const pet4 = new Pet("차차차", 10, "남자", 150);
+        const pet = new Pet("달이", 12, "코숏", 20);
+        const pet2 = new Pet("별이", 8, "바보", 30);
+        const pet3 = new Pet("햇님", 7, "남자", 25);
+        const pet4 = new Pet("하늘", 15, "여자", 15);
         
         // console.log(pet2.a, pet.a, pet3.a, pet4.a)
         
@@ -49,12 +49,13 @@
         let total = ([pettotal, pettotal2, pettotal3, pettotal4]);
         console.log(total);
         
-        
+        console.log(typeof(total[0]))
         for (const item of total) {
+            //[[20,달이] [30,별이] [25,햇님] [15,하늘]]
             if (total < item) {
                 total = item
                 console.log(total)
-                console.log(`이들중 가장 큰 키는 ${total[0]}cm ${total[1]}입니다.`)
+                console.log(`이들중 가장 무거운건 ${total[0]}kg ${total[1]}입니다.`)
             }
         }
 

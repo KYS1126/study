@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <textarea></textarea>
+    <script>
+        const textarea = document.querySelector('textarea')
+        const h1 = document.querySelector('h1')
+        
+        //keypress: 키보드가 입력되었을때 (아시아권 문자는 잘 안됨..)
+        //keydown: 키보다 눌릴때 (아시아권 문자는 잘 안됨..)
+        //keyup: 키보드를 뗀 순간의 값을 보여줌
+        textarea.addEventListener('keyup', function(){
+            const length = textarea.value.length;  // 벨류룰 쓰면. 입력된 글자를 가져올수있다. 인풋 테그에도 쓴다
+            h1.textContent = `글자 수: ${length}`
+        })
+
+    </script>
+</body>
+</html>

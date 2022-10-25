@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">inch<br>
+    <button>계산</button>
+    <p></p>
+    <script>
+        const button = document.querySelector('button') //버튼을 쿼리로 가져옴
+        const input = document.querySelector('input') //인풋을 쿼리로 일단 가져옴
+        const p = document.querySelector('p') //일단 다 가져와 스크립트로
+
+        button.addEventListener('click', function(){
+            const inch = Number(input.value) //인풋 창에서 입력한 값을 가져온다. 텍스트 이기 때문에 넘버로 강제 형변환
+
+            //숫자인지 문자인지 판단.
+            //isNaN -> 숫자가 아니냐? (true라면 숫자가 이닌값.)
+            if (isNaN(inch)) {
+                p.textContent = '숫자를 입력해주세요'
+                return //리턴이 실행되면 밑에있는 코드는 실행안됨.
+                        // 여기서 사용한 이유는 함수를 바로 종료 시키기 위해
+            }
+
+            const cm = inch * 2.54  //inch를 cm로 변환
+            p.textContent = `${cm}cm`
+        
+        })
+    </script>
+</body>
+</html>
