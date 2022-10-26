@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 
+===초기화 코드
+@charset "utf-8";
+@import url('./reset.css');
+===
+max-width: px;   -가로 최대
+margin: 0 auto; 중간정렬
+
+==
+https://fontawesome.com/ 버튼이나 로고 가져다 쓰기
+프리 다운로드
+여기서 가져오는건 폰트처럼 사용 가능하다
+폰트사이즈 적용 가능
+색도 변경 가능. 폰트로 폰트 폴ㄴ트퐅ㄴ
+==
+
+보통 헤더에서 쓰는것.
+position: fixed; 고정 시키기 (스크롤 해도 해당 위치에 고정됨)
+z-index: ; 위로 올라갈수록 위에 배치됨 z인덱스는 포지션 쓸때만 사용가능 (캐드예시로 앞으로 보내기)
+justify-content: space-between; - 칸 사이사이에 틈을 주는것 , 오른쪽 왼쪽도 가능
+align-items: center;   센터 정렬 (div 내에 div들을 가운데 정렬해준다.)
+text-align: center;   센터 정렬 검색해서 차이점 찾기 (div내부의 텍스트에 영향)
+position: relative; 앱솔루트 쓰기 위함 기준을 정해주기
+position: absolute; 앱솔루트는 상위에있는 렐러티브를 기준으로 자리를 잡는다. (부모태그에 relative;  사용)
+
+height: 120px; 정렬
+line-height: 120px; 정렬
+vertical-align: middle; 수직을 정렬
+
+
+-======
+text-align: unset; 원래대로 돌아오게 하는 코드.디폴트로
+---------
+버튼 관련
+이렇게 쓰면 버튼의 테두리와 색을 없애준다
+기능은 그대로 남음
+border: 0;
+outline: 0;
+background-color: transparent;
+=================
+
+div {
+  display: flex;   flex를 주면 원래 블록은 위에서 쌓이는데 flex를 주면 옆으로 정렬됨
+  justify-content: center;   [센터]로 주면 컨테이너 중앙에 플렉스 항목을 정렬함.
+}
+
+flex-direction: row-reverse;     div 요소 내부의 항목을 역순으로 정렬한다. 오른쪽으로 붙는다.
+
+flex 1;주면 모든게 1:1:1이라는 뜻
+
+float: ; 해당 이미지를 왼쪽이나 오른쪽으로 옮긴다.
+
+overflow : 텍스트가 컨테이너보다 클때 스크롤 막대를 추가해준다.
+
+border-radius : div 요소에 둥근 모서리를 추가함
+=======================
+swiper 슬라이드 자바 스크립트
+만들어져 있는걸 가져다가 쓴다.
+
+ <!-- Link Swiper's CSS --> 
+는 맨위에 css링크 걸듯이 넣고
+    <!-- Swiper JS -->
+는 맨 밑에 자바스크립트 넣는것처럼 넣는다.
+ <!-- Swiper -->
+에 있는 코드는 있어야함.
+실제로 슬라이더가 보이는 부분
+<!-- Initialize Swiper -->
+도 밑에 스크립트에 붙여넣기
+css도 카피해서 가져오기
+
+순서주의하기
+
+단순하게 다른 모듈을 합치고싶으면.
+<!-- Initialize Swiper -->(가장아래)
+이부분을 합쳐주면가능하다.
+    <!-- Swiper --> 
+그 다음 버튼관련한 div 복사 후에 붙여넣기
+
+display: block
+
+
+
+
+*/
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="no1">
+            <p>1</p>
+        </div>
+        <div class="no2">2</div>
+        <div class="no3">3</div>
+    </div>
+</body>
+</html>
