@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner1">
+            <h1>이너1</h1>
+            <p class="test"><span>내용1</span></p>
+            <p><span>내용2</span></p>
+            <p><span>내용3</span></p>
+        </section>
+        <section id="inner2">
+            <h1>이너2</h1>
+            <p><span>내용4</span></p>
+            <p><span>내용5</span></p>
+            <p class="test2" style="display: noen"><span>내용6</span></p>
+        </section>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            //contains(찾을내용)
+            $("#inner1 p:contains(내용1)").css({border: "1px solid blue"})
+            // //has 스팬태그를 가지고 있는 애를 선택
+            $("#inner1 p:has(span)").css({border: "1px solid red"})
+            // //contents 선택한 모든 하위요소에 적용
+            $("#outer_wrap").contents().css({border: "1px solid red"})
+            // 선택자(이너2)의 첫번째 빼고 나머지 객체선택
+            $("#inner2 p").not(":first").css({border: "1px solid red"})
+            //이너 1의 test를 찾아서 선택해줌
+            $("#inner1").find('.test').css({border: "1px solid red"})
+           
+            //현재 상태를 물어보는 명령어 참,거짓으로 나옴
+            console.log($('.test2').is(":visible"))
+        })
+    </script>
+</body>
+</html>

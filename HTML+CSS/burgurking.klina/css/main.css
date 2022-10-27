@@ -18,6 +18,7 @@ section .con {
 
 .slider__content {
 	background: thistle;
+
 }
 
 .slider__content .mySwiper{
@@ -37,7 +38,7 @@ section .con {
 	text-align: center;
 	font-size: 18px;
 	background: #fff;
-
+	height: 600px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;

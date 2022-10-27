@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제목</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+    <div id="wrap2">
+        <h1>제목</h1>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script> 
+    <script>
+        $(function(){
+
+            //선택한 태그를 바꿀수 있다.
+            // $("h1").replaceWith("<h3>헤더바꿈</h3>")
+
+            //해당 요소를 지워준다.
+            // $("#wrap").remove()
+
+            //선택한 태그의 하위요소들을 지워준다.
+            // $("#wrap").empty()
+
+            //wrap의 자식 태그들을 가져와서 복제함
+            // console.log($('#wrap').children().clone())
+            //복사본을 변수로 지정후에 어펜드로 넣어줌
+            // var copy = $('#wrap').children().clone()
+            // $("#wrap2").append(copy)
+
+
+            //인덱스 번호를 지정해서 원하는 태그를 입력한다.
+            // $("#wrap p:eq(2)").after("<p>After</p>")
+            // $("#wrap p:eq(1)").before("<p>before</p>")
+
+            //순서만 다름.
+            // $("<p>After</p>").insertAfter("#wrap p:eq(2)")
+            // $("<p>before</p>").insertBefore("#wrap p:eq(2)")
+
+            // //append 맨 뒤에 갖다가 붙여넣는다
+            // $("#wrap").append("<p>내용4</p>")
+            // // prepend 맨 앞에 갖다가 붙여넣는다
+            // $("#wrap").prepend("<p>내용0</p>")
+
+
+
+
+        })
+
+    </script>
+</body>
+</html>

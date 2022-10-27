@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul class="list">
+            <li class="list_1">리스트1</li>
+            <li class="list_2">리스트2</li>
+            <li class="list_3">리스트3</li>
+        </ul>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script> 
+
+    <script>
+        $(function(){
+            var obj = [
+                {
+                    area : "서울",
+                    name : "라이언"
+                },{
+                    arer : "인천",
+                    name : "어피치"
+                },{
+                    area : "부산",
+                    name : "죠르디"
+                }
+            ]
+
+            //선택한 요소중에서 인덱스 번호를 찾기
+            var idxNum = $('li').index($('.list_2'))
+            console.log(idxNum)
+
+
+            //.inArray 찾고싶은 배열을 넣으면 인덱스 번호로 알려준다
+            var names = ["김부장", "정부장", "이부장"]
+            var idxNum = $.inArray("정부장", names)
+            console.log(idxNum)
+
+            //배열인지 아닌지를 판단. 투르 펄스로 알려준다
+            console.log($.isArray(names))
+
+            // grep 필터인 역할 ->true인 값만 배열에 넣어준다.
+            var arr2 = $.grep(obj, function(val, idx){
+                if (val.area === "서울") {
+                return true; 
+                }  else {
+                    return false
+                }
+                    
+                }) 
+
+
+            // map배열 -> 배열값,인덱스 순서, map는 무조건 배열에 넣어준다.
+            var arr1 = $.map(obj, function(val, idx){
+                if (val.area === "서울") { //서울인 애들을 뽑는코드
+                    return val //if-> 원하는 데이터를 리턴해서 배열로 넣어줌
+                }
+            })
+            console.log(arr1)
+
+
+            // .each 배열 -> 인덱스,배열값 순서
+            idx=index
+            $(obj).each(function(idx, val){
+                console.log(idx, val)
+            })  
+
+            $('.list li').each(function(idx, val){
+                console.log(idx, val)
+            })  
+        })
+        </script>
+</body>
+</html>

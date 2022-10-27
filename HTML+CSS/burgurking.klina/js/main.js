@@ -1,12 +1,14 @@
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper('.mySwiper', {
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    speed : 800
-    
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+  },
+  autoplay: {
+      delay: 3000,
+  },
+  speed: 10,
 });
-
-swiper.on('slideChange', function () {
-    console.log('slide changed');
-  });

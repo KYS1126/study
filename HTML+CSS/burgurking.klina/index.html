@@ -7,12 +7,16 @@
 <!-- https://www.starbucks.co.kr/index.do -->
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./library/fontawesome-free-6.2.0-web/css/all.min.css">
-
+<link rel="stylesheet" href="./library/fontawesome-free-6.2.0-web/animate/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
 	<header class="header">
 		<!-- 모바일 메뉴 -->
 		<div class="header__Mnav">
+			<div class="trigger">
+				<button class="mobile close"><i class="fas fa-times fa-lg"></i></button>
+			</div>
 		<nav class="Mmenu">
 			<ul class="Mmenu__main">
 				<li onclick="showHide(this)">
@@ -28,7 +32,7 @@
 						<li><a href="#">음료&디저트</a></li>
 						<li><a href="#">독퍼</a></li>
 					</ul>
-				</li>
+				</li >
 				<li onclick="showHide(this)">
 					<span>매장소개</span>
 					<span><i class="fas fa-chevron-right"></i></span>
@@ -137,11 +141,15 @@
 			<div class="slider__content con">
 				<div class="swiper mySwiper">
 					<div class="swiper-wrapper">
-					  <div class="swiper-slide slide1">Slide 1</div>
-					  <div class="swiper-slide slide2">Slide 2</div>
-					  <div class="swiper-slide slide3">Slide 3</div>
+					  <div class="swiper-slide slide1"></div>
+					  <div class="swiper-slide slide2"></div>
+					  <div class="swiper-slide slide3"></div>
 					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
 				  </div>
+
 			</div>
 		</section>
 		<section class="youtube">
@@ -325,8 +333,7 @@
 		</div>
 	</footer>
 	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-		var swiper = new Swiper(".mySwiper", {});
-	</script>
+	<script src="./js/common.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>

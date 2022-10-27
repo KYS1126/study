@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="title">제목</h1>
+    <h1 id="title2" class="title2">제목</h1>
+
+
+    <div>
+        <ul class="list_1">
+            <li class="list_1">
+                <span class="child1">1번</span>
+                <span>2번</span>
+                <span class="child3">3번</span>
+                <span>4번</span>
+                <span class="child5">5번</span>
+            </li>
+            <li class="list_2">리스트2</li>
+            <li class="list_3">리스트3</li>
+        </ul>
+        <a href="http://www.naver.com">클릭</a>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script> 
+    <script>
+        $(function(){
+
+                // var result1 = $(".list_1").html(); //속성을 가져온다.
+                // console.log(result1)
+                // // $(".list_1").html("<a href='#'>클릭</a>"); //html에 모든게 클릭으로 바뀜
+
+
+                // var result1 = $(".list_1").text(); //태그는 다 빼고 텍스트(문자열)만 가져온다.
+                // console.log(result1)
+                // $(".list_1").text("<a href='#'>클릭</a>");
+
+                //attr - > 태그에 있는 속성을 가져옴
+                console.log($("a").attr("href"))
+                //속성값을 바꿀 수 있음
+                $("a").attr("href", "https://github.com/")
+                //속성값을 삭제할수있음
+                $("a").removeAttr("target")
+        })
+
+    </script>
+</body>
+</html>

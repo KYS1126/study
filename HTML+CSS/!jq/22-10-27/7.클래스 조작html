@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aqua {background-color: aqua;}
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .yellow {background-color: yellow;}
+    </style>
+</head>
+<body>
+    <h1 id="title" class="title">제목</h1>
+    <h1 id="title2" class="title2">제목</h1>
+
+
+    <div>
+        <ul class="list_1">
+            <li class="list_1">
+                <span class="child1">1번</span>
+                <span>2번</span>
+                <span class="child3">3번</span>
+                <span>4번</span>
+                <span class="child5">5번</span>
+            </li>
+            <li class="list_2">리스트2</li>
+            <li class="list_3">리스트3</li>
+        </ul>
+        <a href="http://www.naver.com">클릭</a>
+        <p class="red">안녕하세여 안녕하세요</p>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script> 
+    <script>
+        $(function(){
+            //클래스를 지정 안해도 addClass로 클래스를 추가해준다.
+            // $("p").addClass("aqua")
+            
+            //클래스를 지워주는 코드
+            // $("p").removeClass("red")
+            
+            //적용하면 "red green" 으로 들어간다.
+            //중복되면 없애고 없으면 추가해준다.
+            // $("p").toggleClass("green")
+
+            //클래스를 가지고 있냐고 물어봄, 참,거짓으로 나옴
+            console.log($("p").hasClass("green"))
+        })
+
+    </script>
+</body>
+</html>

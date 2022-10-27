@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="title">제목</h1>
+    <h1 id="title2" class="title2">제목</h1>
+
+    <ul id="wrap">
+        <li id="list_1">
+            <span class="child1">1번</span>
+            <span>2번</span>
+            <span class="child3">3번</span>
+            <span>4번</span>
+            <span class="child5">5번</span>
+        </li>
+        <li id="list_2">리스트2</li>
+        <li id="list_3">리스트3</li>
+    </ul>
+    <!-- jq 링크는 항상 맨 위에 놓기 -->
+    <script src="./jquery-3.6.1.min.js"></script> 
+    <script>
+        $(function(){
+             //  document.querySelector('#title') 이거랑 같아용
+            // $('.title').css("color", "red")
+        })
+
+        $(function(){
+            // //부모자식 선택자. parent 는 부모를 선택하는것,
+            // // //parents 처럼 복수형으로 쓰면 모든 부모를 선택함.
+            // // // children 은 자식 선택자
+            // $('#list_1').parent().css("border", "1px solid red")
+            // $('#list_1').children().css("border", "1px solid red")
+            // $('#list_1').children('.child').css("border", "1px solid blue")
+
+            // //이전과 다음 선택자임. $(선택자의) 다음,이전
+            // $('.child3').prev().css("border", "1px solid red")
+            // $('.child3').next().css("border", "1px solid blue")
+
+            // // 모든 형제들 선택자 child2 의 모든 형제
+            // $('.child3').siblings().css("border", "1px solid blue")
+
+            //prevUntil,nextUntil  -> child3부터 child1번까지
+            // $(여기부터).nextuntil(여기까지)
+            // $('.child3').prevUntil('child1').css("border", "1px solid red")
+            // $('.child3').nextUntil('child5').css("border", "1px solid blue")
+
+            //가장 가까운 상위 선택자
+            // $('.child3').closest('.list_1').css("border", "1px solid red")
+
+            
+
+
+        })
+    </script>
+</body>
+</html>
