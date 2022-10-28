@@ -1,0 +1,181 @@
+@charset "utf-8";
+@import url('./reset.css');
+
+
+
+/* 슬라이더 부분 */
+.slider {
+    background-color: blanchedalmond;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+    height: 580px;
+}
+
+.slider__content {
+    width: 1060px;
+    background-color: royalblue;    
+}
+
+/* 첫번째 섹션 */
+.first__section {
+    background-color: blueviolet;
+    width: 1060px;
+    height: 365px;
+    margin: 0 auto;
+    text-align: center;   
+}
+
+.first__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.first__title__list {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.first__title__p :nth-of-type(1) {
+    font-size: 14px;
+    text-align: left;
+}
+
+.first__title__p :nth-of-type(2) {
+    font-size: 14px;
+    text-align: left;
+    color: antiquewhite;
+    margin-top: 30px;
+}
+
+.first__section__img {
+    float: right;
+    width: 380px;
+    height: 200px;
+    background-color: black;
+}
+
+
+
+/* 두번째 섹션 */
+.second__section {
+    background-color: aquamarine;
+    width: 1060px;
+    height: 365px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.second__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.second__list {
+    display: flex;
+}
+
+.second__title__list {
+    font-size: 14px;
+    text-align: left;
+}
+
+.second__section__img {
+    float: right;
+    width: 380px;
+    height: 200px;
+    background-color: black;
+}
+
+
+/* 소셜 섹션 */
+.social {
+    background-color: gold;
+    margin: 0 auto;
+    width: 1060px;
+    height: 365px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.social__title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+}
+
+.second__slider__section {
+    background-color: blanchedalmond;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+    height: 320px;
+}
+
+.second__slider__content {
+    width: 780px;
+    background-color: royalblue;    
+}
+
+.social > li > img {
+    background-color: green;
+    height: 80px;
+    width: 80px;
+}
+
+.social__li {
+    margin: 100px 0px 100px;
+}
+
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
